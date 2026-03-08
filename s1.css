@@ -121,14 +121,13 @@ figcaption{
     color: darkgreen;
 }
 .read_button{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    height: 30px;
-    width: 300px;
+    display: inline-block;
+    width: 150px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
     text-decoration:none;
-    background-color: rgb(206, 213, 219);
+    background-color: rgb(201, 219, 234);
     border-radius: 5px;
     transition: background-color 0.3s ease-in;
 }
@@ -156,6 +155,10 @@ figcaption{
 .browseBooks{
     display: flex;
     gap: 40px;
+    transition: transform 0.3s ease-out;
+}
+.browseBooks:hover{
+    transform: translateX(15px);
 }
 .browseBooks2{
     font-size: 15px;
@@ -173,8 +176,11 @@ figcaption{
 }
 .paragraph{
     max-width: 1000px;
-    color: gray;
+    color: rgb(99, 92, 92);
     -webkit-line-clamp: 3;
+}
+.vpn{
+    color: rgb(167, 150, 150);
 }
 .genree{
     margin-top: 10px;
@@ -192,8 +198,8 @@ figcaption{
         height: auto;
     }
     .read_button{
-        width: 100%;
-        max-width: 260px;
+        font-size: 10px;
+        width: 80px; 
     }
     .description{
         margin-left: 20px;
@@ -226,8 +232,8 @@ figcaption{
         margin: 0;
     }   
     .genre{
+        display: flex;
         flex-direction:row;
-        flex-wrap:nowrap;
         justify-content:center;
         gap: 40px;
     }
@@ -238,7 +244,7 @@ figcaption{
     }
     .paragraph{
         max-width: 1000px;
-        color: gray;
+        color: rgb(63, 56, 56);
         -webkit-line-clamp: 3;
     }
     .browseBooks{
@@ -248,9 +254,29 @@ figcaption{
         gap: 20px;
         align-items: flex-start;
         max-width: 500px;
+        transition: all 0.3s ease-out;
     }
-    .browseBooks2 h1,h3,h4,p{
+    .browseBooks:hover{
+        transform: translateX(15px);
+    }
+    .browseBooks2 h1,.browseBooks2 h3, .browseBooks2 h4, .browseBooks2 p{
         font-size: 16px;
+    }
+    
+}
+@media (min-width:480px){
+    .genre{
+        gap:5px;
+        flex-direction:row;
+        align-items:center;
+    }
+    .read_button{
+        font-size: 10px;
+        width: 100px; 
+    }
+    .description{
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
